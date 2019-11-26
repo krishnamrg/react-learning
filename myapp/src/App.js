@@ -4,6 +4,7 @@ import AddNinja from "./AddNinja";
 
 // this is a class component and it maintains state.
 class App extends Component {
+
   state = {
     ninjas: [
       { name: "Ryu", age: 30, belt: "Black", id: 1 },
@@ -12,6 +13,14 @@ class App extends Component {
     ]
   };
 
+  addNinja = (ninja) => {
+    ninja.id = Math.round(Math.random(),2);
+    let ninjaCopy = [...this.state.ninjas, ninja];
+    this.setState({
+      ninjas : ninjaCopy
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,7 +28,7 @@ class App extends Component {
           <Ninjas ninjas={this.state.ninjas}> here are the Ninjas</Ninjas>
         </div>
         <div>
-          <AddNinja></AddNinja>
+          <AddNinja addNinja={this.addNinja}></AddNinja>
         </div>
       </div>
     );
