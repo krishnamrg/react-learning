@@ -17,7 +17,7 @@ import React from "react";
 //   return <div className="ninja-list">{ninjaList}</div>;
 
 //Changed from above T-15 to this T-16
-const Ninjas = ({ ninjas }) => {
+const Ninjas = ({ ninjas, deleteNinja }) => {
   return ( // one can also use ternary operator and return null or if condition and return null in else
     <div className="ninja-list"> {
       ninjas.filter(ninja => ninja.age > 30).map(ninja => {
@@ -26,6 +26,7 @@ const Ninjas = ({ ninjas }) => {
             <div>Name: {ninja.name}</div>
             <div>Belt: {ninja.belt}</div>
             <div>Age: {ninja.age}</div>
+            <button onClick={() => {deleteNinja(ninja.id)}}>Delete Ninja</button>
           </div>
         );
       })
