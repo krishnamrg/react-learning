@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Ninjas from "./Ninjas";
 
+// this is a class component and it maintains state.
 class App extends Component {
 
   state = {
