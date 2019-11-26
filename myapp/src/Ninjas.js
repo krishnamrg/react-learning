@@ -18,9 +18,9 @@ import React from "react";
 
 //Changed from above T-15 to this T-16
 const Ninjas = ({ ninjas }) => {
-  return (
+  return ( // one can also use ternary operator and return null or if condition and return null in else
     <div className="ninja-list"> {
-      ninjas.map(ninja => {
+      ninjas.filter(ninja => ninja.age > 30).map(ninja => {
         return (
           <div className="ninja" key={ninja.id}>
             <div>Name: {ninja.name}</div>
