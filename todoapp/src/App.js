@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Todos from "./Todos"
+import AddTodo from "./AddTodo";
 
 class App extends Component {
   
@@ -14,8 +15,13 @@ class App extends Component {
   }
 
   completeTodo = (id) => {
-    const todosCopy = this.state.todos.filter(todo => todo.id!==id);
-    this.setState({todos:todosCopy});
+    const todos = this.state.todos.filter(todo => todo.id!==id);
+    this.setState({todos});
+  }
+
+  addTodo = (todo) => {
+    const todos = [...this.state.todos, todo];
+    this.setState({todos});
   }
 
   render() {
@@ -24,6 +30,7 @@ class App extends Component {
         <h1 className="center blue-text">Todo's</h1>
         <div>
           <Todos todos={this.state.todos} completeTodo={this.completeTodo}></Todos>
+          <AddTodo addTodo={this.addTodo}></AddTodo>
         </div>
       </div>
     );

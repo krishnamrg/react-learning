@@ -16,7 +16,7 @@ const Todos = ({ todos, completeTodo }) => {
         })
       ) 
       : (
-        <div className="empty-list-msg">hurry all caught up!!!</div>
+        <div className="blue-text">hurry all caught up!!!</div>
       )}
     </div>
   );
