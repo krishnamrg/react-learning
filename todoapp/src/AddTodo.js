@@ -21,7 +21,7 @@ class AddTodo extends Component {
     return (
       <div className="addTodo">
         <form onSubmit={this.handleOnSubmit}>
-            <input type="text" onChange={this.handleOnChange} value={this.state.content}></input>
+            <input type="text" onChange={this.handleOnChange} value={this.state.content || ''}></input>
         </form>
       </div>
     );
