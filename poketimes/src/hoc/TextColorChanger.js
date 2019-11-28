@@ -16,7 +16,6 @@ const TextColorChanger = WrappedComponent => {
     "brown"
   ];
   const colorName = `${colors[Math.floor(Math.random() * 12)]}-text`;
-  console.log(colorName);
 
   return props => {
     return (
