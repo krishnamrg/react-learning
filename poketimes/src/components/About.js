@@ -1,10 +1,7 @@
 import React from "react";
+import TextColorChanger from '../hoc/TextColorChanger'
 
 const About = (props) => {
-
-  setTimeout(() => {
-    props.history.push('/contact') //use this programatically redirect
-  },2000);
 
   return (
     <div className="container">
@@ -21,4 +18,4 @@ const About = (props) => {
   );
 };
 
-export default About;
+export default TextColorChanger(About);
