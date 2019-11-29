@@ -20,9 +20,9 @@ class PostDetail extends Component {
     const { post } = this.state;
     return (
       <div className="post card darken-1">
-        <div className="card-content gray-text">
-          <span className="card-title">{post.title}</span>
-          <p>{post.body}</p>
+        <div className="card-content">
+          <span className="card-title red-text">{post.title}</span>
+          <p className="gray-text">{post.body}</p>
         </div>
       </div>
     );

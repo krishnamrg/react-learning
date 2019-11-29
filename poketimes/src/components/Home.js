@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import axios from "axios";
+import ninja from "../image/ninja.png";
 
 class Home extends Component {
   state = {
@@ -19,8 +20,11 @@ class Home extends Component {
       posts.map(post => {
         return (
           <div className="post card darken-1" key={post.id}>
+            <img src={ninja} className="ninja" alt="ninja image"></img>
             <div className="card-content gray-text">
-              <Link to={'/'+post.id} className="card-title">{post.id}) {post.title}</Link>
+              <Link to={"/" + post.id} className="card-title red-text">
+                {post.id}) {post.title}
+              </Link>
               <p>{post.body}</p>
             </div>
           </div>
@@ -30,7 +34,12 @@ class Home extends Component {
       <h1 className="center">no posts yet!</h1>
     );
 
-    return <div>{postsList}</div>;
+    return (
+      <div className="container home">
+        <h4 className="center">Home</h4>
+        {postsList}
+      </div>
+    );
   }
 }
 
