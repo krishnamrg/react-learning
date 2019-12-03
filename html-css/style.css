@@ -1,7 +1,7 @@
 body, h1, h2, a, li{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -128,4 +128,40 @@ footer{
     border-radius: 28px;
 }
 
+/*pseudo classes*/
+nav li a:hover{
+    text-decoration: underline;
+    /* background-color: #fefefe; */
+}
+.images li:hover{
+    top: -4px;
+    position: relative;
+}
 
+.join input:focus{
+ border: 2px dotted gray;
+ outline: none;
+}
+.join input:valid{
+    border: 2px solid green;
+}
+
+/* nav li:first-child{
+    border: 3px solid green;
+} */
+
+/* psuedo elements */
+article p::after{
+    content: ' ...';
+}
+article p::first-line{
+    font-style: italic;
+}
+article p::first-letter{
+    font-size: 1.5em;
+    color: red;
+}
+p::selection{
+    background-color: red;
+    color: white;
+}
