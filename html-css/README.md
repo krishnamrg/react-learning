@@ -76,3 +76,8 @@
     ** p::after{
         content: '...'
     }
+
+## box-sizing : border-box
+    * this property tells that padding is inclusive of the total width of the container.
+    * normally width = widht + padding.
+    * box-sizing : border-box resets that property.
