@@ -49,7 +49,30 @@
     }
     (Or)
     HtmlElement #id-name{
-        ....
+        ....Visual Studio Code
     }
     (Or)
     *** A combination of all of the above.
+
+## pseudo classes
+    * :focus, :hover, :valid, :first-child, :nth-child(index), :last-child
+    (list of psuedo classes can be found at w3schools)
+    ** they are used to style the elements when they are in a particular state.
+    ** example 
+    nav li a:hover{
+        prop:value:
+    }
+
+## pseudo elements
+    * pseudo elements are mostly like psuedo classes but they let you manipulate content before/after/between content.
+    ** example
+    ** a li p::first-line{
+        prop:value;
+    }
+    ** section.item p::selection{
+        background-color:red;
+    }
+    * following ... content will be inserted after paragraph element.
+    ** p::after{
+        content: '...'
+    }
