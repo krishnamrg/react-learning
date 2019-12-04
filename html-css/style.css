@@ -78,6 +78,7 @@ nav li a.join{
 
 article{
     padding: 0px 20px;
+    margin-top: 5%;
 }
 
 article h2{
@@ -164,4 +165,51 @@ article p::first-letter{
 p::selection{
     background-color: red;
     color: white;
+}
+
+/* media queres */
+
+@media screen and (max-width:1200px){
+    
+    .banner h2{
+        font-size: 40px;;
+    }
+
+}
+@media screen and (max-width:800px){
+    .banner .welcome{
+        position: relative;
+        text-align: center;
+    }
+    .banner h2{
+        font-size: 25px;
+    }
+    .banner h2 span{
+        font-size: 1em;
+    }
+    .banner h2 br{
+        display: none;
+    }
+    .images li{
+        display: block;
+        width: 100%;
+    }
+    ul.images{
+        padding-right: 40px;
+    }
+
+}
+@media screen and (max-width:600px){
+    nav li{
+        font-size: 35px;
+        display: block;
+        width: 100%;
+    }
+    nav{
+        text-align: center;
+        top: 0;
+    }
+    header{
+        position: relative;
+    }
 }
