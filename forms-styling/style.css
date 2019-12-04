@@ -93,6 +93,8 @@ input[type="email"], input[type="telephone"]{
     border-radius: 4px;
     background: url("img/inputs.png") no-repeat;
     border: 0;
+    float: left;
+    clear: both;
 }
 
 input[type="email"]{
@@ -135,3 +137,26 @@ input[type="submit"]{
 }
 
 /* validation styling */
+
+input[type="email"]:valid, 
+input[type="telephone"]:valid {
+    border: 2px solid #fff;
+}
+
+input[type="email"]:valid{
+    background-position: 7px -22px;
+}
+input[type="telephone"]:valid {
+    background-position: 7px -97px;
+}
+
+input[type="email"]:valid + .tick,
+input[type="telephone"]:valid + .tick{
+    background: url("img/tick.png") no-repeat center;
+    background-size: 100%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin: 10px;
+}
