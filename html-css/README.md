@@ -6,6 +6,7 @@
  * group selector
  * attribute selector
  * descendent selector
+ * adjacent selector
 
  ## id selector
     * #id {
@@ -53,6 +54,15 @@
     }
     (Or)
     *** A combination of all of the above.
+
+## adjacent seletors
+    ** example
+    input:checked + label[for="webdevelopment"], 
+    input:checked + label[for="photoshop"],
+    input:checked + label[for="singingmadonnasongs"]{
+        background-position: 0 -64px;
+        color:#ce1010;
+    }
 
 ## pseudo classes
     * :focus, :hover, :valid, :first-child, :nth-child(index), :last-child
