@@ -55,6 +55,24 @@
     (Or)
     *** A combination of all of the above.
 
+## direct child selector
+    * this is used to select only the direct children of the parent element.
+    ** example
+    <main>
+        <p></p>
+        <p></p>
+        <div>
+            <p></p>
+        </div>
+    </main>
+
+    * to select only the first level p use > operator
+
+    main > p{
+        color:red;
+    }
+
+
 ## adjacent seletors
     ** example
     input:checked + label[for="webdevelopment"], 
@@ -89,5 +107,9 @@
 
 ## box-sizing : border-box
     * this property tells that padding is inclusive of the total width of the container.
-    * normally width = widht + padding.
-    * box-sizing : border-box resets that property.
+    * normally ```width = widht + padding```.
+    * ```box-sizing : border-box``` resets that property.
+
+# interms of specifity, the more specific the selector, the rule with more specific rule wins. css works top down for same selectors.
+
+# ```!important``` declaration is used to override this behavior.
